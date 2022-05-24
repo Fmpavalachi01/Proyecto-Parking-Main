@@ -1,7 +1,5 @@
 package model;
 
-public enum Bono {
-
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -26,4 +24,4 @@ public enum Bono {
 		return conRespectoAInicio >= 0 && conRespectoAFinal <= 0;
 	}
 
-}}
+}
