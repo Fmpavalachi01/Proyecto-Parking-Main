@@ -1,6 +1,6 @@
 package control;
 
-public class RenovacionControllerImpl implements RenovacionController{
+public class BajaControllerImpl implements BajaController{
 
 	@Override
 	public boolean renovarMembresiaSocio(boolean renovacion) {
