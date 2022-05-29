@@ -1,17 +1,25 @@
 package control;
 
-public class BajaControllerImpl implements BajaController{
+import repositories.AbonadoRepository;
+import repositories.SocioRepository;
+
+public class BajaControllerImpl implements BajaController {
+	private SocioRepository repositorioSocios;
+	private AbonadoRepository repositorioAbonados;
 
 	@Override
-	public boolean renovarMembresiaSocio(boolean renovacion) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public boolean renovarBonoAbonado(boolean renovacion) {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean darDeBaja(String matricula) {
+		boolean baja = false;
+		if (repositorioSocios.isSocio(matricula) == true) {
+			repositorioSocios.eliminarSocioByMatricula(matricula);
+			baja = true;
+		} else if (repositorioAbonados.isAbonado(matricula) == true) {
+			repositorioAbonados.eliminarAbonadoPorMatricula(matricula);
+			baja = true;
+		} else {
+			baja = false;
+		}
+		return baja;
 	}
 
 }
