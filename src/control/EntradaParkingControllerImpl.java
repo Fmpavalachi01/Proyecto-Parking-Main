@@ -13,7 +13,7 @@ public class EntradaParkingControllerImpl implements EntradaParkingController {
 	public boolean identificarUsuario(String matricula) {
 		if (repositorioSocio.isSocio(matricula) == true) {
              		return true;
-		} else if (repositorioAbonados.isAbonado(matricula) == false
+		} else if (repositorioAbonados.isAbonado(matricula) == true
 					&& repositorioAbonados.getBonoDentroDeHorario(matricula) == true) {
 				return true;
 			}
