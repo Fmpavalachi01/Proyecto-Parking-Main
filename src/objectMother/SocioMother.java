@@ -7,23 +7,21 @@ import model.Socio;
 public class SocioMother {
 
 private ArrayList<Socio> misSocios = new ArrayList<Socio>();
-	
-	public boolean creaSocios(String matriculaEntrada) {
+private String[] matriculasEntrada= {"abcd1","abcd2","1234a","1234b"};	
+
+public ArrayList<Socio> creaSocios() {
 		
 		//con el primer if controlo que la matricula no esté vacia
 		//si lo cumple retorna true y lo añade al arraylist, sino false
-		
-		if (matriculaEntrada != null) {
-			misSocios.add(new Socio(matriculaEntrada));
+		for (int j = 0; j < this.matriculasEntrada.length; j++) {
 			
-			return true;
+		if (this.matriculasEntrada[j] != null) {
+			misSocios.add(new Socio(this.matriculasEntrada[j]));
 		}
-		return false;
-		
-	}
+		}
 
-	public ArrayList<Socio> getMisSocios() {
 		return misSocios;
 	}
-	
+
 }
+	
