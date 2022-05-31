@@ -10,13 +10,4 @@ public class EstacionamientoControllerImpl implements EstacionamientoController{
 		estacionamientos.crearEstacionamiento(matricula);		
 	}
 
-	@Override
-	public boolean getExistenciaEstacionamiento(String matricula) {
-		if (estacionamientos.getEstacionamiento(matricula)!=null) {
-			return true;
-		}else {
-			
-			return false;
-		}
-	}
 }

@@ -12,4 +12,8 @@ public interface EstacionamientoRepository {
 	public void crearEstacionamiento(String matricula);
 
 	public Estacionamiento getEstacionamiento(String matricula);
+	
+	public boolean getExistenciaEstacionamiento(String matricula);
+
+	public double getTarifaTotal(String matricula);
 }

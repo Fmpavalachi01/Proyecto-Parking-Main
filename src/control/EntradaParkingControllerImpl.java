@@ -1,23 +1,22 @@
 package control;
 
 import repositories.AbonadoRepository;
+import repositories.SocioRepository;
 
 
 public class EntradaParkingControllerImpl implements EntradaParkingController {
 	private AbonadoRepository repositorioAbonados;
 	private EstacionamientoController estacionamientos;
-	private UsuarioController usuarios;
+	private SocioRepository repositorioSocio;
 
 	@Override
 	public boolean identificarUsuario(String matricula) {
-		if (usuarios.getTipoUsuario(matricula) == true) {
-			if (usuarios.getTipoCliente(matricula) == true) {
-				return true;
-			} else if (usuarios.getTipoCliente(matricula) == false
+		if (repositorioSocio.isSocio(matricula) == true) {
+             		return true;
+		} else if (repositorioAbonados.isAbonado(matricula) == false
 					&& repositorioAbonados.getBonoDentroDeHorario(matricula) == true) {
 				return true;
 			}
-		}
 		return false;
 	}
 
