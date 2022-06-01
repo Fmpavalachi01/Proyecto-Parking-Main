@@ -5,15 +5,13 @@ import java.time.LocalDateTime;
 public class Estacionamiento {
 	private LocalDateTime horaEntrada;
 	private LocalDateTime horaSalida;
-	private float tarifaPorMinuto;
+	private final float tarifaPorMinuto=0.01f;
 	private String matricula;
 
-	public Estacionamiento(LocalDateTime horaEntrada, LocalDateTime horaSalida, float tarifaPorMinuto,
-			String matricula) {
+	public Estacionamiento(LocalDateTime horaEntrada, String matricula) {
 		super();
 		this.horaEntrada = horaEntrada;
 		this.horaSalida = horaSalida;
-		this.tarifaPorMinuto = tarifaPorMinuto;
 		this.matricula = matricula;
 	}
 
@@ -43,9 +41,7 @@ public class Estacionamiento {
 		return tarifaPorMinuto;
 	}
 
-	public void setTarifaPorMinuto(float tarifaPorMinuto) {
-		this.tarifaPorMinuto = tarifaPorMinuto;
-	}
+
 
 	public String getMatricula() {
 		return matricula;

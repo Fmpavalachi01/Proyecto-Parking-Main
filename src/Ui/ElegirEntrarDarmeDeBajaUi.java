@@ -45,16 +45,14 @@ public class ElegirEntrarDarmeDeBajaUi extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("Eligue una opcion:");
+		JLabel lblNewLabel = new JLabel("Elige una opción:");
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		lblNewLabel.setBounds(103, 209, 173, 73);
 		contentPane.add(lblNewLabel);
 		
-		JButton btnNewButton = new JButton("Darme de baja como abonado");
-		btnNewButton.setBounds(329, 156, 194, 50);
-		contentPane.add(btnNewButton);
+
 		
-		JButton btnDarmeDeBaja = new JButton("Darme de baja como socio");
+		JButton btnDarmeDeBaja = new JButton("Darme de baja");
 		btnDarmeDeBaja.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 			}
