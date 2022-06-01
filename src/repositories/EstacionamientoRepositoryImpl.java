@@ -58,9 +58,10 @@ public class EstacionamientoRepositoryImpl implements EstacionamientoRepository 
 
 	@Override
 	public double getTarifaTotal(String matricula) {
-	//TODO
-		//esto pa esta tarde noob
 		double tarifaTotal = 0;
+		//TODO
+		
+		
 		return tarifaTotal;
 	}
 
