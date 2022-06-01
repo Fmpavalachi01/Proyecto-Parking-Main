@@ -1,6 +1,7 @@
 package repositories;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 import model.Socio;
 import objectMother.SocioMother;
@@ -23,9 +24,15 @@ public class SocioRepositoryImpl implements SocioRepository {
 
 	@Override
 	public void eliminarSocioByMatricula(String matricula) {
-		for (Socio socioElement : listaSocios) {
-			if (socioElement.getMatricula().equalsIgnoreCase(matricula)) {
-				listaSocios.remove(socioElement);
+
+		boolean eliminado = false;
+		Iterator iterator = listaSocios.iterator();
+		while (iterator.hasNext()) {
+			String abonadoelemento = (String) iterator.next();
+
+			if (eliminado == false) {
+				iterator.remove();
+				eliminado = true;
 			}
 		}
 
