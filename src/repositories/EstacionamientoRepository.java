@@ -16,4 +16,6 @@ public interface EstacionamientoRepository {
 	public boolean getExistenciaEstacionamiento(String matricula);
 
 	public double getTarifaTotal(String matricula);
+
+	public boolean controlarPeriodoDeGracia(String matricula);
 }

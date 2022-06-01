@@ -92,7 +92,7 @@ public class AbonadoSocioUi extends JFrame {
 		lblNewLabel_6.setBounds(605, 255, 46, 14);
 		contentPane.add(lblNewLabel_6);
 		
-		JLabel lblNewLabel_7 = new JLabel("Fecha de expiracon: ");
+		JLabel lblNewLabel_7 = new JLabel("Fecha de expiración: ");
 		lblNewLabel_7.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		lblNewLabel_7.setBounds(480, 321, 188, 32);
 		contentPane.add(lblNewLabel_7);
