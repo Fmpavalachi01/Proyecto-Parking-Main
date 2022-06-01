@@ -41,9 +41,7 @@ public class Estacionamiento {
 		return tarifaPorMinuto;
 	}
 
-	public void setTarifaPorMinuto(float tarifaPorMinuto) {
-		this.tarifaPorMinuto = tarifaPorMinuto;
-	}
+
 
 	public String getMatricula() {
 		return matricula;
