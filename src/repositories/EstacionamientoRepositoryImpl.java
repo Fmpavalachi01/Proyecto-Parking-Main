@@ -58,17 +58,15 @@ public class EstacionamientoRepositoryImpl implements EstacionamientoRepository 
 
 	@Override
 	public double getTarifaTotal(String matricula) {
-		double tarifaTotal = 0;
-		//TODO
-		
-		
+		Estacionamiento actual=getEstacionamiento(matricula);
+		double tarifaTotal = actual.calcularMinutosEstacionamiento(actual.getHoraEntrada(),actual.getHoraSalida())*actual.getTarifaPorMinuto();
 		return tarifaTotal;
 	}
 
 	@Override
-	public boolean controlarPeriodoDeGracia(String matricula) {
-		// preguntar a jose
-		int diferenciaMinutos = 0;
+	public boolean controlarPeriodoDeGracia(String matricula, LocalDateTime horaPago) {
+		Estacionamiento actual=getEstacionamiento(matricula);
+		double diferenciaMinutos = actual.calcularMinutosEstacionamiento(actual.getHoraSalida(), horaPago);
 		if (diferenciaMinutos < 20) {
 			return true;
 		}

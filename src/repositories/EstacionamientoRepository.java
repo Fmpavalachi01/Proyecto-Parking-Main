@@ -1,5 +1,7 @@
 package repositories;
 
+import java.time.LocalDateTime;
+
 import model.Estacionamiento;
 
 public interface EstacionamientoRepository {
@@ -17,5 +19,5 @@ public interface EstacionamientoRepository {
 
 	public double getTarifaTotal(String matricula);
 
-	public boolean controlarPeriodoDeGracia(String matricula);
+	public boolean controlarPeriodoDeGracia(String matricula, LocalDateTime horaPago);
 }
