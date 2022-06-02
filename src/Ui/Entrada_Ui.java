@@ -14,7 +14,7 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 import javax.swing.ImageIcon;
 
-public class EntradaUi extends JFrame {
+public class Entrada_Ui extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField textField;
@@ -26,7 +26,7 @@ public class EntradaUi extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					EntradaUi frame = new EntradaUi();
+					Entrada_Ui frame = new Entrada_Ui();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -38,7 +38,7 @@ public class EntradaUi extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public EntradaUi() {
+	public Entrada_Ui() {
 		setBackground(new Color(0, 0, 0));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 902, 568);

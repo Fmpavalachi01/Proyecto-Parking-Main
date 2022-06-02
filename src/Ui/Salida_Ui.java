@@ -12,7 +12,7 @@ import javax.swing.SwingConstants;
 import java.awt.Color;
 import javax.swing.ImageIcon;
 
-public class SalidaUi extends JFrame {
+public class Salida_Ui extends JFrame {
 
 	private JPanel contentPane;
 
@@ -23,7 +23,7 @@ public class SalidaUi extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					SalidaUi frame = new SalidaUi();
+					Salida_Ui frame = new Salida_Ui();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -35,7 +35,7 @@ public class SalidaUi extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public SalidaUi() {
+	public Salida_Ui() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 883, 586);
 		contentPane = new JPanel();

@@ -13,7 +13,7 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class ElegirEntrarDarmeDeBajaUi extends JFrame {
+public class Elegir_Entrar_Darme_DeBaja_Ui extends JFrame {
 
 	private JPanel contentPane;
 
@@ -24,7 +24,7 @@ public class ElegirEntrarDarmeDeBajaUi extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					ElegirEntrarDarmeDeBajaUi frame = new ElegirEntrarDarmeDeBajaUi();
+					Elegir_Entrar_Darme_DeBaja_Ui frame = new Elegir_Entrar_Darme_DeBaja_Ui();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -36,7 +36,7 @@ public class ElegirEntrarDarmeDeBajaUi extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public ElegirEntrarDarmeDeBajaUi() {
+	public Elegir_Entrar_Darme_DeBaja_Ui() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 886, 554);
 		contentPane = new JPanel();
