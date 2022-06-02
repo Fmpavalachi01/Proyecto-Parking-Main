@@ -76,7 +76,7 @@ public class Entrada_Ui extends JFrame {
 		JLabel lblNewLabel_2 = new JLabel("Label de posible error");
 		lblNewLabel_2.setForeground(Color.RED);
 		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblNewLabel_2.setBounds(278, 299, 299, 20);
+		lblNewLabel_2.setBounds(278, 299, 299, 14);
 		contentPane.add(lblNewLabel_2);
 		
 		JButton btnSalir = new JButton("Salir");
