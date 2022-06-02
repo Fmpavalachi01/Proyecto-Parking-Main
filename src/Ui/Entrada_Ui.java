@@ -60,17 +60,33 @@ public class Entrada_Ui extends JFrame {
 		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_1.setForeground(new Color(0, 0, 0));
-		lblNewLabel_1.setBounds(77, 199, 320, 58);
+		lblNewLabel_1.setBounds(71, 136, 320, 58);
 		contentPane.add(lblNewLabel_1);
 		
 		textField = new JTextField();
-		textField.setBounds(355, 222, 223, 20);
+		textField.setBounds(340, 159, 223, 20);
 		contentPane.add(textField);
 		textField.setColumns(10);
 		
 		JButton btnNewButton = new JButton("Aceptar\r\n");
 		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		btnNewButton.setBounds(340, 372, 192, 58);
+		btnNewButton.setBounds(278, 205, 192, 58);
 		contentPane.add(btnNewButton);
+		
+		JLabel lblNewLabel_2 = new JLabel("Label de posible error");
+		lblNewLabel_2.setForeground(Color.RED);
+		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblNewLabel_2.setBounds(278, 299, 299, 14);
+		contentPane.add(lblNewLabel_2);
+		
+		JButton btnSalir = new JButton("Salir");
+		btnSalir.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		btnSalir.setBounds(82, 399, 192, 58);
+		contentPane.add(btnSalir);
+		
+		JButton btnEntrar = new JButton("Entrar");
+		btnEntrar.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		btnEntrar.setBounds(600, 399, 192, 58);
+		contentPane.add(btnEntrar);
 	}
 }
