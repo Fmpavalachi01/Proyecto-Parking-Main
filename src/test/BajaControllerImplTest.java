@@ -9,7 +9,7 @@ import control.BajaControllerImpl;
 class BajaControllerImplTest {
 
 	@Test
-	void testBajas() {
+	void test() {
 		
 		BajaControllerImpl controlador = new BajaControllerImpl();
 		assertFalse(controlador.darDeBaja("9999"));

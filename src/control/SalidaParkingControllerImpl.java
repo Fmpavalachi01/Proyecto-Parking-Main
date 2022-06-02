@@ -2,10 +2,10 @@ package control;
 
 import java.time.LocalDateTime;
 
-import repositories.EstacionamientoRepository;
+import repositories.EstacionamientoRepositoryImpl;
 
 public class SalidaParkingControllerImpl implements SalidaParkingController {
-	private EstacionamientoRepository estacionamientoRepository;
+	private EstacionamientoRepositoryImpl estacionamientoRepository=new EstacionamientoRepositoryImpl();
 
 	@Override
 	public boolean salirDelParking(String matricula) {

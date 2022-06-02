@@ -5,9 +5,11 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 import model.Abonado;
+import objectMother.AbonadoMother;
 
 public class AbonadoRepositoryImpl implements AbonadoRepository {
-	private ArrayList<Abonado> listaAbonados = new ArrayList<Abonado>();
+	AbonadoMother abonados=new AbonadoMother();
+	private ArrayList<Abonado> listaAbonados = abonados.creaAbonados();
 
 	@Override
 	public boolean isAbonado(String matricula) {
@@ -57,5 +59,14 @@ public class AbonadoRepositoryImpl implements AbonadoRepository {
 		return abonadoAdevolver;
 
 	}
-
+    
+	public String getNombre(String matricula) {
+		String nombre="";
+		for (Abonado abonado : listaAbonados) {
+			if (abonado.getMatricula().equalsIgnoreCase(matricula)) {
+				nombre=abonado.getNombre();
+			}
+		}
+		return nombre;
+	}
 }

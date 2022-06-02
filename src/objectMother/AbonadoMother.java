@@ -7,17 +7,17 @@ import model.Bono;
 
 public class AbonadoMother {
 
-	private ArrayList<Abonado> misAbonados = new ArrayList<Abonado>();
-	private String[] matriculaEntrada = {"cba123","cba321","abc123","abc321"};
-	private Bono[] bonoEntrada = { Bono.diario, Bono.findeSemana, Bono.diario, Bono.findeSemana };
-	private int[] tarjetas = { 123, 234, 345, 456 };
-	private String[] nombre = { "Elena", "Florian", "Adrian", "Inma" };
 
-	public ArrayList<Abonado> creaAbonados(String matriculaEntrada, Bono bonoEntrada) {
-		for (int i = 0; i < this.bonoEntrada.length; i++) {
+	public ArrayList<Abonado> creaAbonados() {
+		ArrayList<Abonado> misAbonados = new ArrayList<Abonado>();
+		String[] matriculaEntrada = {"cba123","cba321","abc123","abc321"};
+		Bono[] bonoEntrada = { Bono.diario, Bono.findeSemana, Bono.diario, Bono.findeSemana };
+		int[] tarjetas = { 123, 234, 345, 456 };
+		String[] nombre = { "Elena", "Florian", "Adrian", "Inma" };
+		for (int i = 0; i < bonoEntrada.length; i++) {
 
-			if (this.matriculaEntrada[i] != null && this.bonoEntrada[i] != null) {
-				misAbonados.add(new Abonado(this.bonoEntrada[i], this.matriculaEntrada[i],this.nombre[i], this.tarjetas[i]));
+			if (matriculaEntrada[i] != null && bonoEntrada[i] != null) {
+				misAbonados.add(new Abonado(bonoEntrada[i], matriculaEntrada[i],nombre[i], tarjetas[i]));
 
 			}
 		}

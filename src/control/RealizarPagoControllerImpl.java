@@ -1,9 +1,9 @@
 package control;
 
-import repositories.EstacionamientoRepository;
+import repositories.EstacionamientoRepositoryImpl;
 
 public class RealizarPagoControllerImpl implements RealizarPagoController{
-    EstacionamientoRepository estacionamientoRepository;
+    EstacionamientoRepositoryImpl estacionamientoRepository=new EstacionamientoRepositoryImpl();
 	@Override
 	public String realizarPago(String matricula, double pago) {
 		String cambio="";
@@ -14,6 +14,10 @@ public class RealizarPagoControllerImpl implements RealizarPagoController{
 			cambio="El cambio es de: "+(pago-tarifa)+"€";
 		}
 		return cambio;
+	}
+	@Override
+	public double getTarifaTotal(String matricula) {
+		return estacionamientoRepository.getTarifaTotal(matricula);
 	}
     
 }

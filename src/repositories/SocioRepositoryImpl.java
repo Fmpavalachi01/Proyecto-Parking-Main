@@ -3,12 +3,13 @@ package repositories;
 import java.util.ArrayList;
 import java.util.Iterator;
 
+import model.Abonado;
 import model.Socio;
 import objectMother.SocioMother;
 
 public class SocioRepositoryImpl implements SocioRepository {
 
-	private SocioMother socioMother;
+	private SocioMother socioMother=new SocioMother();
 	ArrayList<Socio> listaSocios = socioMother.creaSocios();
 
 	@Override
@@ -36,6 +37,15 @@ public class SocioRepositoryImpl implements SocioRepository {
 			}
 		}
 
+	}
+	public String getNombre(String matricula) {
+		String nombre="";
+		for (Socio socio : listaSocios) {
+			if (socio.getMatricula().equalsIgnoreCase(matricula)) {
+				nombre=socio.getNombre();
+			}
+		}
+		return nombre;
 	}
 
 }

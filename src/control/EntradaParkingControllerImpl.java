@@ -1,12 +1,12 @@
 package control;
 
-import repositories.AbonadoRepository;
-import repositories.SocioRepository;
+import repositories.AbonadoRepositoryImpl;
+import repositories.SocioRepositoryImpl;
 
 
 public class EntradaParkingControllerImpl implements EntradaParkingController {
-	private AbonadoRepository repositorioAbonados;
-	private SocioRepository repositorioSocio;
+	private AbonadoRepositoryImpl repositorioAbonados=new AbonadoRepositoryImpl();
+	private SocioRepositoryImpl repositorioSocio=new SocioRepositoryImpl();
 
 	@Override
 	public boolean entradaParking(String matricula) {

@@ -10,14 +10,18 @@ import javax.swing.JButton;
 
 public class EntradaUi extends JPanel {
 	private JTextField textField;
-
+    private JButton btnAceptar;
+    private JLabel lblError;
+    private JButton btnEntrar;
+    private JButton btnSalir;
+    
 	/**
 	 * Create the panel.
 	 */
 	public EntradaUi() {
 		setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("\u00A1Bienvenido! :D");
+		JLabel lblNewLabel = new JLabel("\u00A1Bienvenido! ");
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setForeground(new Color(32, 178, 170));
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 44));
@@ -34,26 +38,39 @@ public class EntradaUi extends JPanel {
 		add(textField);
 		textField.setColumns(10);
 		
-		JButton btnNewButton = new JButton("Aceptar");
-		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		btnNewButton.setBounds(267, 290, 171, 67);
-		add(btnNewButton);
+		btnAceptar = new JButton("Aceptar");
+		btnAceptar.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		btnAceptar.setBounds(267, 290, 171, 67);
+		add(btnAceptar);
 		
-		JLabel lblNewLabel_2 = new JLabel("Label de posible error");
-		lblNewLabel_2.setForeground(new Color(255, 0, 0));
-		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblNewLabel_2.setBounds(267, 409, 171, 20);
-		add(lblNewLabel_2);
+		lblError = new JLabel("");
+		lblError.setForeground(new Color(255, 0, 0));
+		lblError.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblError.setBounds(267, 409, 171, 20);
+		add(lblError);
 		
-		JButton btnSalir = new JButton("Salir");
+	    btnSalir = new JButton("Salir");
 		btnSalir.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		btnSalir.setBounds(47, 461, 171, 67);
 		add(btnSalir);
 		
-		JButton btnEntrar = new JButton("Entrar");
+		btnEntrar = new JButton("Entrar");
 		btnEntrar.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		btnEntrar.setBounds(605, 461, 171, 67);
 		add(btnEntrar);
 
 	}
+    public JButton getBtnAceptarEntrada() {
+    	return btnAceptar;
+    }
+    public JButton getBtnEntrar() {
+    	return btnEntrar;
+    }
+    public JButton getBtnSalir() {
+    	return btnSalir;
+    }
+    
+    public String getTextFieldMatriculaInsert() {
+    	return textField.getText();
+    }
 }
