@@ -11,7 +11,7 @@ import java.awt.Font;
 import java.awt.Color;
 import javax.swing.JButton;
 
-public class CobroUi extends JFrame {
+public class Cobro_Ui extends JFrame {
 
 	private JPanel contentPane;
 
@@ -22,7 +22,7 @@ public class CobroUi extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					CobroUi frame = new CobroUi();
+					Cobro_Ui frame = new Cobro_Ui();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -34,7 +34,7 @@ public class CobroUi extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public CobroUi() {
+	public Cobro_Ui() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 842, 592);
 		contentPane = new JPanel();
