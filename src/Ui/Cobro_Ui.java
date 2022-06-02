@@ -10,10 +10,13 @@ import javax.swing.JLabel;
 import java.awt.Font;
 import java.awt.Color;
 import javax.swing.JButton;
+import javax.swing.SwingConstants;
+import javax.swing.JTextField;
 
 public class Cobro_Ui extends JFrame {
 
 	private JPanel contentPane;
+	private JTextField textField;
 
 	/**
 	 * Launch the application.
@@ -43,48 +46,58 @@ public class Cobro_Ui extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("Ha introducido la tarjeta: ");
-		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		lblNewLabel.setBounds(39, 111, 219, 49);
-		contentPane.add(lblNewLabel);
-		
-		JLabel lblTarjeta = new JLabel("Tarjeta");
-		lblTarjeta.setForeground(new Color(30, 144, 255));
-		lblTarjeta.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		lblTarjeta.setBounds(256, 111, 219, 49);
-		contentPane.add(lblTarjeta);
-		
 		JLabel lblSuTarifaEs = new JLabel("Su tarifa es de :");
 		lblSuTarifaEs.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		lblSuTarifaEs.setBounds(39, 214, 134, 49);
+		lblSuTarifaEs.setBounds(36, 121, 134, 49);
 		contentPane.add(lblSuTarifaEs);
 		
 		JLabel lblX = new JLabel("X \u20AC");
 		lblX.setForeground(new Color(30, 144, 255));
 		lblX.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		lblX.setBounds(181, 214, 219, 49);
+		lblX.setBounds(169, 121, 219, 49);
 		contentPane.add(lblX);
 		
 		JButton btnNewButton = new JButton("Pagar aqu\u00ED");
 		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		btnNewButton.setBounds(39, 299, 190, 51);
+		btnNewButton.setBounds(244, 283, 190, 51);
 		contentPane.add(btnNewButton);
 		
 		JLabel lblSeLeDevuelven = new JLabel("Se le devuelven :");
 		lblSeLeDevuelven.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		lblSeLeDevuelven.setBounds(120, 418, 219, 49);
+		lblSeLeDevuelven.setBounds(110, 358, 151, 49);
 		contentPane.add(lblSeLeDevuelven);
 		
 		JLabel lblX_1 = new JLabel("X \u20AC");
 		lblX_1.setForeground(new Color(30, 144, 255));
 		lblX_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		lblX_1.setBounds(269, 418, 219, 49);
+		lblX_1.setBounds(258, 358, 219, 49);
 		contentPane.add(lblX_1);
 		
 		JButton btnAceptar = new JButton("Aceptar");
 		btnAceptar.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		btnAceptar.setBounds(487, 417, 190, 51);
+		btnAceptar.setBounds(592, 458, 190, 51);
 		contentPane.add(btnAceptar);
+		
+		JLabel lblPagarEstancia = new JLabel("Pagar estancia");
+		lblPagarEstancia.setHorizontalAlignment(SwingConstants.CENTER);
+		lblPagarEstancia.setFont(new Font("Tahoma", Font.PLAIN, 30));
+		lblPagarEstancia.setBounds(10, 37, 806, 73);
+		contentPane.add(lblPagarEstancia);
+		
+		JLabel lblIntroduzcaCantidad = new JLabel("Introduzca cantidad");
+		lblIntroduzcaCantidad.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		lblIntroduzcaCantidad.setBounds(36, 192, 180, 49);
+		contentPane.add(lblIntroduzcaCantidad);
+		
+		textField = new JTextField();
+		textField.setBounds(205, 209, 146, 20);
+		contentPane.add(textField);
+		textField.setColumns(10);
+		
+		JLabel lblNewLabel_2 = new JLabel("Cantidad insuficiente");
+		lblNewLabel_2.setForeground(Color.RED);
+		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblNewLabel_2.setBounds(110, 428, 299, 14);
+		contentPane.add(lblNewLabel_2);
 	}
-
 }

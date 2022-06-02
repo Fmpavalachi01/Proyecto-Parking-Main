@@ -11,6 +11,7 @@ import java.awt.Font;
 import javax.swing.SwingConstants;
 import java.awt.Color;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 
 public class Salida_Ui extends JFrame {
 
@@ -45,24 +46,28 @@ public class Salida_Ui extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblElPagoSe = new JLabel("El pago se ha realizado correctamente, \u00A1Ya puede salir!");
+		JLabel lblElPagoSe = new JLabel("Puede proceder a abandonar el parking");
 		lblElPagoSe.setHorizontalAlignment(SwingConstants.CENTER);
 		lblElPagoSe.setFont(new Font("Tahoma", Font.PLAIN, 25));
-		lblElPagoSe.setBounds(10, 191, 847, 49);
+		lblElPagoSe.setBounds(10, 207, 847, 49);
 		contentPane.add(lblElPagoSe);
 		
-		JLabel lblQueTengaUn = new JLabel("Que tenga un buen");
-		lblQueTengaUn.setHorizontalAlignment(SwingConstants.CENTER);
-		lblQueTengaUn.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		lblQueTengaUn.setBounds(10, 410, 847, 49);
-		contentPane.add(lblQueTengaUn);
+		JLabel lblSalida = new JLabel("SALIDA");
+		lblSalida.setHorizontalAlignment(SwingConstants.CENTER);
+		lblSalida.setFont(new Font("Tahoma", Font.PLAIN, 30));
+		lblSalida.setBounds(10, 27, 847, 73);
+		contentPane.add(lblSalida);
 		
-		JLabel lblTipoDeHora = new JLabel("Tipo de hora");
-		lblTipoDeHora.setForeground(new Color(30, 144, 255));
-		lblTipoDeHora.setHorizontalAlignment(SwingConstants.CENTER);
-		lblTipoDeHora.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		lblTipoDeHora.setBounds(384, 410, 386, 49);
-		contentPane.add(lblTipoDeHora);
+		JButton btnNewButton = new JButton("Aceptar\r\n");
+		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		btnNewButton.setBounds(326, 385, 192, 58);
+		contentPane.add(btnNewButton);
+		
+		JLabel lblNewLabel_2 = new JLabel("Label si ha pasado el periodo de gracia");
+		lblNewLabel_2.setForeground(Color.RED);
+		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblNewLabel_2.setBounds(254, 166, 299, 14);
+		contentPane.add(lblNewLabel_2);
 	}
 
 }
