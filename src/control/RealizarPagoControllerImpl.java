@@ -11,7 +11,7 @@ public class RealizarPagoControllerImpl implements RealizarPagoController{
 		if (pago<tarifa) {
 			cambio="La cantidad pagada es insuficiente";
 		}else {
-			cambio="El cambio es de: "+(pago-tarifa)+"€";
+			cambio=(pago-tarifa)+"€";
 		}
 		return cambio;
 	}

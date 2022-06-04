@@ -4,6 +4,7 @@ import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
@@ -135,11 +136,14 @@ public class UI extends JFrame {
 		return pagos.getBtnContinuarPagos();
 	}
 
-	public void setLblMensajeSalida(boolean periodoGracia) {
-		salida.setLblMensajeSalida(periodoGracia);
+	public void setLblMensajeSalida(String mensaje) {
+		salida.setLblMensajeSalida(mensaje);
 	}
 
 	public JButton getBtnAceptarSalida() {
 		return salida.getBtnAceptarSalida();
 	}
+	public JLabel getLblMensaje() {
+    	return entrada.getLblMensaje();
+    }
 }

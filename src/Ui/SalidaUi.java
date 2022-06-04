@@ -18,14 +18,15 @@ public class SalidaUi extends JPanel {
 		
 		JLabel lblNewLabel_1 = new JLabel("SALIDA");
 		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_1.setForeground(new Color(32, 178, 170));
 		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 30));
 		lblNewLabel_1.setBounds(10, 58, 783, 44);
 		add(lblNewLabel_1);
 		
-		lblMensajeSalida = new JLabel("Label si ha pasado el periodo de gracia");
-		lblMensajeSalida.setForeground(Color.RED);
+		lblMensajeSalida = new JLabel("");
+		lblMensajeSalida.setForeground(new Color(32, 178, 170));
 		lblMensajeSalida.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblMensajeSalida.setBounds(266, 128, 301, 20);
+		lblMensajeSalida.setBounds(166, 128, 690, 20);
 		add(lblMensajeSalida);
 		
 		btnAceptarSalida = new JButton("Aceptar");
@@ -34,12 +35,8 @@ public class SalidaUi extends JPanel {
 		add(btnAceptarSalida);
 
 	}
-    public void setLblMensajeSalida(boolean periodoGracia) {
-    	if (periodoGracia==true) {
-			lblMensajeSalida.setText("\"Puede proceder a abandonar el parking\"");
-		}else {
-			lblMensajeSalida.setText("Label si ha pasado el periodo de gracia");
-		}
+    public void setLblMensajeSalida(String mensaje) {
+    	lblMensajeSalida.setText(mensaje);
     }
     
     public JButton getBtnAceptarSalida() {

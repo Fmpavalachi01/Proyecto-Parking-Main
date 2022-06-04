@@ -50,7 +50,7 @@ public class ParaUI extends UI {
 					}
 				} else {
 					estacionamientos.generarEstacionamiento(matricula);
-					cerrarVentana();
+					getLblMensaje().setText("Su estacionamiento se ha generado correctamente");
 				}
 				
 			}
@@ -59,9 +59,14 @@ public class ParaUI extends UI {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				cambiarPanel(getPagos());
-				repEstacionamientos.setHoraSalida(LocalDateTime.now(),matricula);
-				setTextFieldTarifaTotal(pagos.getTarifaTotal(matricula));
+				if (repSocios.isSocio(matricula)==true || repAbonados.isAbonado(matricula)==true) {
+					setLblMensajeSalida("Ya puede salir del parking, esperamos que haya tenido una agradable estancia");
+					cambiarPanel(getSalida());
+				}else {
+					repEstacionamientos.setHoraSalida(LocalDateTime.now(),matricula);
+					setTextFieldTarifaTotal(pagos.getTarifaTotal(matricula));
+					cambiarPanel(getPagos());
+				}
 			}
 		});
 		
@@ -79,7 +84,7 @@ public class ParaUI extends UI {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				if (pagos.realizarPago(matricula, cantidadPago).equalsIgnoreCase("El cambio es de: "+(cantidadPago-pagos.getTarifaTotal(matricula))+"€")) {
+				if (pagos.realizarPago(matricula, cantidadPago).equalsIgnoreCase((cantidadPago-pagos.getTarifaTotal(matricula))+"€")) {
 					cambiarPanel(getSalida());
 				} else {
                     setTextFieldCambio(pagos.realizarPago(matricula, cantidadPago));
@@ -93,6 +98,11 @@ public class ParaUI extends UI {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				bajas.darDeBaja(matricula);
+				if (repSocios.isSocio(matricula)==true) {
+					getLblMensaje().setText("El cliente "+repSocios.getNombre(matricula)+" se ha dado de baja correctamente");
+				}else if(repAbonados.isAbonado(matricula)==true) {
+					getLblMensaje().setText("El cliente "+repAbonados.getNombre(matricula)+" se ha dado de baja correctamente");
+				}
 				cambiarPanel(getEntrada());
 			}
 		});
@@ -111,10 +121,9 @@ public class ParaUI extends UI {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				if (salidas.salirDelParking(matricula)) {
-					setLblMensajeSalida(salidas.salirDelParking(matricula));
 					cerrarVentana();
 				} else {
-					setLblMensajeSalida(salidas.salirDelParking(matricula));
+					setLblMensajeSalida("Ha superado el periodo de gracia, debe pagar su nuevo estacionamiento");
 					estacionamientos.generarEstacionamiento(matricula);
 					repEstacionamientos.setHoraSalida(LocalDateTime.now(),matricula);
 					cambiarPanel(getPagos());

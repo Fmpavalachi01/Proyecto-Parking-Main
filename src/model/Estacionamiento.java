@@ -12,7 +12,7 @@ public class Estacionamiento {
 	public Estacionamiento(LocalDateTime horaEntrada, String matricula) {
 		super();
 		this.horaEntrada = horaEntrada;
-		this.horaSalida = getHoraSalida();
+		this.horaSalida = LocalDateTime.now().plusMinutes(1);
 		this.matricula = matricula;
 	}
 

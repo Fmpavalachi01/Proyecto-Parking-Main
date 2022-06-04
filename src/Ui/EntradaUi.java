@@ -11,7 +11,7 @@ import javax.swing.JButton;
 public class EntradaUi extends JPanel {
 	private JTextField textField;
     private JButton btnAceptar;
-    private JLabel lblError;
+    private JLabel lblMensaje;
     private JButton btnEntrar;
     private JButton btnSalir;
     
@@ -43,11 +43,11 @@ public class EntradaUi extends JPanel {
 		btnAceptar.setBounds(267, 290, 171, 67);
 		add(btnAceptar);
 		
-		lblError = new JLabel("");
-		lblError.setForeground(new Color(255, 0, 0));
-		lblError.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblError.setBounds(267, 409, 171, 20);
-		add(lblError);
+		lblMensaje = new JLabel("");
+		lblMensaje.setForeground(new Color(32, 178, 170));
+		lblMensaje.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblMensaje.setBounds(47, 409, 580, 20);
+		add(lblMensaje);
 		
 	    btnSalir = new JButton("Salir");
 		btnSalir.setFont(new Font("Tahoma", Font.PLAIN, 20));
@@ -72,5 +72,9 @@ public class EntradaUi extends JPanel {
     
     public String getTextFieldMatriculaInsert() {
     	return textField.getText();
+    }
+    
+    public JLabel getLblMensaje() {
+    	return lblMensaje;
     }
 }

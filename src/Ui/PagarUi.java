@@ -35,7 +35,7 @@ public class PagarUi extends JPanel {
 		lblTarifa = new JLabel("X\u20AC");
 		lblTarifa.setForeground(new Color(100, 149, 237));
 		lblTarifa.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		lblTarifa.setBounds(178, 152, 51, 44);
+		lblTarifa.setBounds(178, 152, 659, 44);
 		add(lblTarifa);
 
 		JLabel lblNewLabel_1_1_1 = new JLabel("Introducir cantidad");
@@ -55,13 +55,13 @@ public class PagarUi extends JPanel {
 
 		JLabel lblNewLabel_1_1_1_1 = new JLabel("Su cambio es de ");
 		lblNewLabel_1_1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		lblNewLabel_1_1_1_1.setBounds(39, 381, 159, 35);
+		lblNewLabel_1_1_1_1.setBounds(39, 381, 181, 35);
 		add(lblNewLabel_1_1_1_1);
 
 		lblCambio = new JLabel("X\u20AC");
 		lblCambio.setForeground(new Color(100, 149, 237));
 		lblCambio.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		lblCambio.setBounds(194, 381, 51, 44);
+		lblCambio.setBounds(194, 381, 659, 44);
 		add(lblCambio);
 
 		btnContinuarPagos = new JButton("Continuar");
