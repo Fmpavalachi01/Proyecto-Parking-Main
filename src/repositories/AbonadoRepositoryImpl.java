@@ -28,7 +28,7 @@ public class AbonadoRepositoryImpl implements AbonadoRepository {
 		boolean eliminado = false;
 		Iterator iterator = listaAbonados.iterator();
 		while (iterator.hasNext()) {
-			String abonadoelemento = (String) iterator.next();
+			Abonado abonadoelemento = (Abonado) iterator.next();
 
 			if (eliminado == false) {
 				iterator.remove();

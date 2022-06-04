@@ -16,7 +16,7 @@ public class DarDeBajaUi extends JPanel {
 	public DarDeBajaUi() {
 		setLayout(null);
 		
-		lblNombreCliente = new JLabel("\u00A1Bienvenido \"nombre cliente\"!");
+		lblNombreCliente = new JLabel("\u00A1Bienvenido \nombre cliente\"!");
 		lblNombreCliente.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNombreCliente.setBounds(10, 67, 861, 25);
 		lblNombreCliente.setFont(new Font("Tahoma", Font.PLAIN, 30));
@@ -39,7 +39,8 @@ public class DarDeBajaUi extends JPanel {
 
 	}
     public void setNombreCliente(String nombreCliente) {
-    	lblNombreCliente.setText("\u00A1Bienvenido \""+nombreCliente+"!");
+    	String mensaje="\u00A1Bienvenido "+nombreCliente+"!";
+    	lblNombreCliente.setText(mensaje);
     }
     public JButton getBtnDarDeBaja() {
     	return btnDarDeBaja;

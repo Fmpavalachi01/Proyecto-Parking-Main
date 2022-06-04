@@ -1,11 +1,11 @@
 package control;
 
-import repositories.AbonadoRepository;
-import repositories.SocioRepository;
+import repositories.AbonadoRepositoryImpl;
+import repositories.SocioRepositoryImpl;
 
 public class BajaControllerImpl implements BajaController {
-	private SocioRepository repositorioSocios;
-	private AbonadoRepository repositorioAbonados;
+	private SocioRepositoryImpl repositorioSocios=new SocioRepositoryImpl();
+	private AbonadoRepositoryImpl repositorioAbonados=new AbonadoRepositoryImpl();
 
 	@Override
 	public boolean darDeBaja(String matricula) {

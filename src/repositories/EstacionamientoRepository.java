@@ -20,4 +20,5 @@ public interface EstacionamientoRepository {
 	public double getTarifaTotal(String matricula);
 
 	public boolean controlarPeriodoDeGracia(String matricula, LocalDateTime horaPago);
+	public void setHoraSalida(LocalDateTime now, String matricula);
 }

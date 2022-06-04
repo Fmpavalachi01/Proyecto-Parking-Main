@@ -4,11 +4,13 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 import model.Estacionamiento;
+import objectMother.EstacionamientoMother;
 
 public class EstacionamientoRepositoryImpl implements EstacionamientoRepository {
-	private ArrayList<Estacionamiento> estacionamiento = new ArrayList<Estacionamiento>();
+	EstacionamientoMother crearEstacionamientos=new EstacionamientoMother();
+	private ArrayList<Estacionamiento> estacionamiento = crearEstacionamientos.estacionamientoMother();
 	private final int numeroPlazas = 100;
-	private int plazasOcupadas = 0;
+	private int plazasOcupadas = 4;
 
 	@Override
 	public void incrementarPlazasOcupadas() {
@@ -71,6 +73,14 @@ public class EstacionamientoRepositoryImpl implements EstacionamientoRepository 
 			return true;
 		}
 		return false;
+	}
+
+	public void setHoraSalida(LocalDateTime now, String matricula) {
+		for (Estacionamiento estacionamiento2 : estacionamiento) {
+			if (estacionamiento2.getMatricula().equalsIgnoreCase(matricula)) {
+				estacionamiento2.setHoraSalida(now);
+			}
+		}
 	}
 
 }

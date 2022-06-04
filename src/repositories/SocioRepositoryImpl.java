@@ -29,7 +29,7 @@ public class SocioRepositoryImpl implements SocioRepository {
 		boolean eliminado = false;
 		Iterator iterator = listaSocios.iterator();
 		while (iterator.hasNext()) {
-			String abonadoelemento = (String) iterator.next();
+			Socio socioelemento = (Socio) iterator.next();
 
 			if (eliminado == false) {
 				iterator.remove();
