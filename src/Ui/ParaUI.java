@@ -84,7 +84,7 @@ public class ParaUI extends UI {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				if (pagos.realizarPago(matricula, cantidadPago).equalsIgnoreCase((cantidadPago-pagos.getTarifaTotal(matricula))+"€")) {
+				if (pagos.realizarPago(matricula, cantidadPago).equalsIgnoreCase((Math.round(cantidadPago-pagos.getTarifaTotal(matricula)))+"€" )){
 					cambiarPanel(getSalida());
 				} else {
                     setTextFieldCambio(pagos.realizarPago(matricula, cantidadPago));

@@ -11,13 +11,13 @@ public class RealizarPagoControllerImpl implements RealizarPagoController{
 		if (pago<tarifa) {
 			cambio="La cantidad pagada es insuficiente";
 		}else {
-			cambio=(pago-tarifa)+"€";
+			cambio=Math.round(pago-tarifa)+"€";
 		}
 		return cambio;
 	}
 	@Override
 	public double getTarifaTotal(String matricula) {
-		return estacionamientoRepository.getTarifaTotal(matricula);
+		return Math.round(estacionamientoRepository.getTarifaTotal(matricula));
 	}
     
 }
