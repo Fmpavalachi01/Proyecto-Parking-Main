@@ -12,7 +12,9 @@ class EstacionamientoControllerImplTest {
 	@Test
 	void testGenerarEstacionamiento() {
 
-		EstacionamientoControllerImpl controlador = new EstacionamientoControllerImpl();
+		EstacionamientoRepositoryImpl miEstacionamiento = new EstacionamientoRepositoryImpl();
+
+		EstacionamientoControllerImpl controlador = new EstacionamientoControllerImpl(miEstacionamiento);
 		EstacionamientoRepositoryImpl repositorio = new EstacionamientoRepositoryImpl();
 
 		String matricula = "123B";
