@@ -10,8 +10,8 @@ import repositories.EstacionamientoRepositoryImpl;
 class EstacionamientoControllerImplTest {
 
 	@Test
-void testGenerarEstacionamiento() {
-		
+	void testGenerarEstacionamiento() {
+
 		EstacionamientoControllerImpl controlador = new EstacionamientoControllerImpl();
 		EstacionamientoRepositoryImpl repositorio = new EstacionamientoRepositoryImpl();
 
@@ -20,5 +20,12 @@ void testGenerarEstacionamiento() {
 		assertTrue(repositorio.getExistenciaEstacionamiento(matricula));
 	}
 
+	@Test
+	void testGenerarEstacionamientoRepository() {
+		EstacionamientoRepositoryImpl repositorio = new EstacionamientoRepositoryImpl();
 
+		String matricula = "123B";
+		repositorio.crearEstacionamiento(matricula);
+		assertTrue(repositorio.getExistenciaEstacionamiento(matricula));
+	}
 }
