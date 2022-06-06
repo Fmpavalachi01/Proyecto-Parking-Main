@@ -2,14 +2,15 @@ package control;
 
 import java.time.LocalDateTime;
 
-import repositories.AbonadoRepositoryImpl;
-import repositories.EstacionamientoRepositoryImpl;
-import repositories.SocioRepositoryImpl;
+import repositories.AbonadoRepository;
+import repositories.EstacionamientoRepository;
+import repositories.SocioRepository;
+
 
 public class SalidaParkingControllerImpl implements SalidaParkingController {
-	private EstacionamientoRepositoryImpl estacionamientoRepository=new EstacionamientoRepositoryImpl();
-    private SocioRepositoryImpl socioRepository= new SocioRepositoryImpl();
-    private AbonadoRepositoryImpl abonadoRepository= new AbonadoRepositoryImpl();
+	private EstacionamientoRepository estacionamientoRepository;
+    private SocioRepository socioRepository;
+    private AbonadoRepository abonadoRepository;
 	@Override
 	public boolean salirDelParking(String matricula) {
         boolean salida=true;
@@ -20,4 +21,12 @@ public class SalidaParkingControllerImpl implements SalidaParkingController {
 		}
         return salida;
 	}
+	public SalidaParkingControllerImpl(EstacionamientoRepository estacionamientoRepository,
+			SocioRepository socioRepository, AbonadoRepository abonadoRepository) {
+		super();
+		this.estacionamientoRepository = estacionamientoRepository;
+		this.socioRepository = socioRepository;
+		this.abonadoRepository = abonadoRepository;
+	}
+	
 }

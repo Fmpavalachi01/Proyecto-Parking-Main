@@ -18,11 +18,11 @@ public class ParaUI extends UI {
 	private SocioRepositoryImpl repSocios = new SocioRepositoryImpl();
 	private AbonadoRepositoryImpl repAbonados = new AbonadoRepositoryImpl();
 	private EstacionamientoRepositoryImpl repEstacionamientos = new EstacionamientoRepositoryImpl();
-	private EntradaParkingControllerImpl entradas = new EntradaParkingControllerImpl();
-	private EstacionamientoControllerImpl estacionamientos = new EstacionamientoControllerImpl();
-	private BajaControllerImpl bajas = new BajaControllerImpl();
-	private RealizarPagoControllerImpl pagos = new RealizarPagoControllerImpl();
-	private SalidaParkingControllerImpl salidas = new SalidaParkingControllerImpl();
+	private EntradaParkingControllerImpl entradas = new EntradaParkingControllerImpl(repAbonados,repSocios);
+	private EstacionamientoControllerImpl estacionamientos = new EstacionamientoControllerImpl(repEstacionamientos);
+	private BajaControllerImpl bajas = new BajaControllerImpl(repSocios,repAbonados);
+	private RealizarPagoControllerImpl pagos = new RealizarPagoControllerImpl(repEstacionamientos);
+	private SalidaParkingControllerImpl salidas = new SalidaParkingControllerImpl(repEstacionamientos,repSocios,repAbonados);
 	private String matricula = "";
 	private Double cantidadPago=0.0;
 
